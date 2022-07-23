@@ -161,7 +161,7 @@
             <input type="hidden" name="pid">
             <input type="hidden" name="edit_product" value="1">
             <div class="col-12">
-              <button type="button" class="btn btn-primary submit-edit-product">Add Product</button>
+              <button type="button" class="btn btn-primary submit-edit-product">Update Product</button>
             </div>
           </div>
 

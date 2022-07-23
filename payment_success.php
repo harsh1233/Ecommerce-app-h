@@ -4,16 +4,15 @@ session_start();
 if(!isset($_SESSION["uid"])){
 	header("location:index.php");
 }
-
-if (isset($_GET["st"])) {
+if (isset($_POST["st"])) {
 
 	# code...
-	$trx_id = $_GET["tx"];
-		$p_st = $_GET["st"];
-		$amt = $_GET["amt"];
-		$cc = $_GET["cc"];
-		$cm_user_id = $_GET["cm"];
-		$c_amt = $_COOKIE["ta"];
+	$trx_id = $_POST["tx"];
+		$p_st = $_POST["st"];
+		// $amt = $_POST["amt"];
+		// $cc = $_POST["cc"];
+		$cm_user_id = $_POST["cm"];
+		// $c_amt = $_COOKIE["ta"];
 	if ($p_st == "Completed") {
 
 		
