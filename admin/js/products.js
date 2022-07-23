@@ -54,16 +54,15 @@ $(document).ready(function () {
 			cache: false,
 			processData: false,
 			success: function (response) {
-				console.log(response);
-				var resp = $.parseJSON(response);
+				var resp = response;
+				console.log(resp);
 				if (resp.status == 202) {
 					$("#add-product-form").trigger("reset");
 					$("#add_product_modal").modal('hide');
 					getProducts();
-					// window.location.href = "index.php";
-					//window.location = '../admin/classes/Products.php';
+					window.location.href = "products.php";
 				} else if (resp.status == 303) {
-					// window.location.href = "products.php";
+					window.location.href = "products.php";
 					alert(resp.message);
 
 				}

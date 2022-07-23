@@ -202,13 +202,13 @@ if (isset($_POST["Common"])) {
 								<b class="net_total" style="font-size:20px;"> </b>
 					</div>';
 			if (!isset($_SESSION["uid"])) {
-				echo '<input type="submit" style="float:right;" name="login_user_with_product" class="btn btn-info btn-lg" value="Ready to Checkout" >
+				echo '<input type="submit" style="float:right;" name="login_user_with_product" class="btn btn-info btn-lg" value="Buy Now" >
 							</form>';
 			} else if (isset($_SESSION["uid"])) {
 				//Paypal checkout form
 				echo '
 						</form>
-						<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+						<form action="payment_success.php" method="post">
 							<input type="hidden" name="cmd" value="_cart">
 							<input type="hidden" name="business" value="shoppingcart@ecommerceastro.com">
 							<input type="hidden" name="upload" value="1">';
@@ -226,15 +226,18 @@ if (isset($_POST["Common"])) {
 				}
 
 				echo
-				'<input type="hidden" name="return" value="http://localhost/project1/payment_success.php"/>
-					                <input type="hidden" name="notify_url" value="http://localhost/ecommerce-app-h/payment_success.php">
-									<input type="hidden" name="cancel_return" value="http://localhost/ecommerce-app-h/cancel.php"/>
-									<input type="hidden" name="currency_code" value="USD"/>
-									<input type="hidden" name="custom" value="' . $_SESSION["uid"] . '"/>
-									<input style="float:right;margin-right:80px;" type="image" name="submit"
-										src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/blue-rect-paypalcheckout-60px.png" alt="PayPal Checkout"
-										alt="PayPal - The safer, easier way to pay online">
-								</form>';
+					'<input type="hidden" name="return" value="http://localhost/project1/payment_success.php"/>
+					<input type="hidden" name="st" value="Completed"/>
+					<input type="hidden" name="tx" value="' .time().mt_rand(0, 4). '"/>
+					<input type="hidden" name="cm" value="' . $_SESSION["uid"] . '"/>
+					<input type="hidden" name="notify_url" value="http://localhost/ecommerce-app-h/payment_success.php">
+					<input type="hidden" name="cancel_return" value="http://localhost/ecommerce-app-h/cancel.php"/>
+					<input type="hidden" name="currency_code" value="USD"/>
+					<input type="hidden" name="custom" value="' . $_SESSION["uid"] . '"/>
+					<input style="float:right;margin-right:80px;" type="image" name="submit"
+						src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/blue-rect-paypalcheckout-60px.png" alt="PayPal Checkout"
+						alt="PayPal - The safer, easier way to pay online">
+				</form>';
 			}
 		}
 	}
