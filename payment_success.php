@@ -77,6 +77,8 @@ if (isset($_POST["st"])) {
 											successfully completed and your Transaction id is <b><?php echo $trx_id; ?></b><br/>
 											you can continue your Shopping <br/></p>
 											<a href="index.php" class="btn btn-success btn-lg">Continue Shopping</a>
+											<a href="invoice.php?user_id=<?php echo $cm_user_id;?>&trx_id=<?php echo $trx_id;?>"  class="btn btn-success btn-lg">Download Invoice</a>
+
 										</div>
 										<div class="panel-footer"></div>
 									</div>
