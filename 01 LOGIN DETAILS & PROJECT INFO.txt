@@ -1,10 +1,13 @@
+
+** Put project XAMPP->htdocs folder
+Then, go to the URL “http://localhost/phpmyadmin“.
+Create a Database with a name ecommerceapp.
+Click on the “Import” tab and choose the database file (.sql) which is provided under the folder naming “DATABASE FILE”.
+Then go to the URL “http://localhost/[ ENTER_PROJECT_FOLDER_NAME_HERE ]“
+
 **Database Name: ecommerceapp**
 
-**After setup project in yout htdocs folder you need to change database password in database.php and constant.php (eg. my db password is newpassword)
-
 **Recommended PHP Version 5.6.3**
-
-
 
 **Admin Login Details**
 
