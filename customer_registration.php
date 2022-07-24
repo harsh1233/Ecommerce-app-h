@@ -100,14 +100,15 @@ if (isset($_GET["register"])) {
 								<div class="row">
 									<div class="col-md-12">
 										<label for="cardNumber">Card Number</label>
-										<input type="number" size="20" autocomplete="off" class="form-control" id="cardNumber" name="cardNumber">
+										<input type="text" placeholder="0000 0000 0000 0000" size="18"  minlength="16" maxlength="16" class="form-control" id="cardNumber" name="cardNumber">
+
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="col-md-12">
 										<label for="exp_month">Expiration Month</label>
-										<input type="number" class="form-control" size="2" id="exp_month" name="exp_month">
+										<input type="text"  placeholder="MM" class="form-control" minlength="1" maxlength="2"   size="2" id="exp_month" name="exp_month">
 
 									</div>
 								</div>
@@ -115,7 +116,7 @@ if (isset($_GET["register"])) {
 								<div class="row">
 									<div class="col-md-12">
 										<label for="exp_year">Expiration Year</label>
-										<input type="number" class="form-control" size="4" id="exp_year" name="exp_year">
+										<input type="text" placeholder="YYYY" class="form-control" minlength="1" maxlength="4"  size="4" id="exp_year" name="exp_year">
 
 									</div>
 								</div>
@@ -123,7 +124,7 @@ if (isset($_GET["register"])) {
 								<div class="row">
 									<div class="col-md-12">
 										<label for="cvv">CVV</label>
-										<input type="number" class="form-control" size="4" autocomplete="off" id="cvv" name="cvv">
+										<input type="password" class="form-control" placeholder="000" size="1" minlength="3" maxlength="3" id="cvv" name="cvv">
 									</div>
 								</div>
 								<p><br /></p>
