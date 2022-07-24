@@ -23,7 +23,7 @@ if(!isset($_SESSION["uid"])){
 		</style>
 	</head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar navbar-btn bg-info navbar-fixed-top" style="margin-top:0px;">
 		<div class="container-fluid">	
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
@@ -87,17 +87,13 @@ if(!isset($_SESSION["uid"])){
 	<p><br/></p>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-2">
-
-			</div>
-			<div class="col-md-8">	
+			<div class="col-md-10 col-xs-offset-1 ">	
 				<div class="row">
 					<div class="col-md-12 col-xs-12" id="product_msg">
 					</div>
 				</div>
-				<div class="panel panel-info" id="scroll">
-					<div class="panel-heading">Products</div>
+				<div class="panel panel-warning" id="scroll">
+					<div class="panel-heading text-center">Products</div>
 					<div class="panel-body">
 						<div id="get_product">
 							<!--Here we get product jquery Ajax Request-->
