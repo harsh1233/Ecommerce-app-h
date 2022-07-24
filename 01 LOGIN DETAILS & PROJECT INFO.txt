@@ -1,6 +1,6 @@
 **Database Name: ecommerceapp**
 
-
+**After setup project in yout htdocs folder you need to change database password in database.php and constant.php (eg. my db password is newpassword)
 
 **Recommended PHP Version 5.6.3**
 
