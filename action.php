@@ -33,7 +33,7 @@ if (isset($_POST["getProduct"])) {
 			$pro_image = $row['product_image'];
 			echo "
 				<div class='col-md-4'>
-							<div class='panel panel-info'>
+							<div class='panel panel-danger'>
 								<div class='panel-heading'>$pro_title</div>
 								<div class='panel-body'>
 									<img src='product_images/$pro_image' style='width:220px; height:250px;'/>

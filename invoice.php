@@ -38,7 +38,7 @@ $pdf->Cell(0, 10, "", 1, 1);
 $pdf->Cell(80, 10, "Product", 1, 0);
 $pdf->Cell(35, 10, "Quantity", 1, 0);
 $pdf->Cell(35, 10, "TAX", 1, 0);
-$pdf->Cell(40, 10, "Price", 1, 1);
+$pdf->Cell(40, 10, "Price (".CURRENCY.")", 1, 1);
 
 
 $sql = "SELECT * FROM orders WHERE trx_id = '$trx_id' and user_id = '$user_id' and p_status = 'Completed'";
@@ -63,7 +63,7 @@ if (mysqli_num_rows($query) > 0) {
     $pdf->Cell(0, 10, "", 1, 1);
 
     $pdf->Cell(120, 10, 'Total', 1, 0, 'C');
-    $pdf->Cell(70, 10, $total, 1, 0, 'C');
+    $pdf->Cell(70, 10, $total.' '.CURRENCY, 1, 0, 'C');
 }
 
 // $pdf->Cell(60, 20, $pdf->WriteHTML( ($html)));
